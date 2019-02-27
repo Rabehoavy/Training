@@ -33,38 +33,62 @@ $conn = null;
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-	<a href="read.php">Liste des données</a>
-	<h1>Ajouter</h1>
-	<form action="create.php" method="post">
-		<div>
-			<label for="name">Name</label>
-			<input type="text" name="name" value="">
-		</div>
+	<nav class="navbar navbar-expand-lg navbar-primary bg-light">
+  <a class="navbar-brand" href="#">Randonnée</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		<div>
-			<label for="difficulty">Difficulté</label>
-			<select name="difficulty">
-				<option value="très facile">Très facile</option>
-				<option value="facile">Facile</option>
-				<option value="moyen">Moyen</option>
-				<option value="difficile">Difficile</option>
-				<option value="très difficile">Très difficile</option>
-			</select>
-		</div>
-		
-		<div>
-			<label for="distance">Distance</label>
-			<input type="text" name="distance" value="">
-		</div>
-		<div>
-			<label for="duration">Durée</label>
-			<input type="duration" name="duration" value="">
-		</div>
-		<div>
-			<label for="height_difference">Dénivelé</label>
-			<input type="text" name="height_difference" value="">
-		</div>
-		<button type="submit" name="button">Envoyer</button>
-	</form>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="read.php">Liste des données <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="create.php">Ajouter des données</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+	<div class="row">
+      <div class="offset-md-3 col-md-2">
+		<h1>Ajouter</h1>
+		<form action="create.php" method="post" class="form-horizontal">
+			<div class="form-group">
+				<label for="name">Name</label>
+				<input type="text" class="form-control" name="name" value="">
+			</div>
+
+			<div class="form-group">
+				<label for="difficulty">Difficulté</label>
+				<select name="difficulty" class="form-control">
+					<option value="très facile">Très facile</option>
+					<option value="facile">Facile</option>
+					<option value="moyen">Moyen</option>
+					<option value="difficile">Difficile</option>
+					<option value="très difficile">Très difficile</option>
+				</select>
+			</div>
+			
+			<div class="form-group">
+				<label for="distance">Distance</label>
+				<input type="text" class="form-control" name="distance" value="">
+			</div>
+			<div class="form-group">
+				<label for="duration">Durée</label>
+				<input type="duration" class="form-control" name="duration" value="">
+			</div>
+			<div class="form-group">
+				<label for="height_difference">Dénivelé</label>
+				<input type="text" class="form-control" name="height_difference" value="">
+			</div>
+			<button class="btn btn-primary" type="submit" name="button">Envoyer</button>
+		</form>
+	</div>
+	</diV>
 </body>
 </html>
